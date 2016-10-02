@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://servis.cyanlog.com/EVAglobal6.asmx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://servis.cyanlog.com/EVAglobal6.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://servis.cyanlog.com/EVAglobal6.asmx">
+      <s:element name="servistest">
+        <s:complexType />
+      </s:element>
+      <s:element name="servistestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="servistestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cyanid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cyanpass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="konus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="soru" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cyanid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cyanpass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lng" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="konusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="konusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ai">
+        <s:complexType />
+      </s:element>
+      <s:element name="aiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bekci">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bekciResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bekciResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="userinfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cyanid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cyanpass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="istek" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="userinfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userinfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="goruntu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cyanid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cyanpass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lng" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="goruntuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="goruntuResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ucparti">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cyankey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ucpartiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ucpartiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="robotdata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hareketistek" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cyanid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="unit" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="robotdataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="robotdataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="classctrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="soru" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="classctrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="classctrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="servistestSoapIn">
+    <wsdl:part name="parameters" element="tns:servistest" />
+  </wsdl:message>
+  <wsdl:message name="servistestSoapOut">
+    <wsdl:part name="parameters" element="tns:servistestResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapIn">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapOut">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="konusSoapIn">
+    <wsdl:part name="parameters" element="tns:konus" />
+  </wsdl:message>
+  <wsdl:message name="konusSoapOut">
+    <wsdl:part name="parameters" element="tns:konusResponse" />
+  </wsdl:message>
+  <wsdl:message name="aiSoapIn">
+    <wsdl:part name="parameters" element="tns:ai" />
+  </wsdl:message>
+  <wsdl:message name="aiSoapOut">
+    <wsdl:part name="parameters" element="tns:aiResponse" />
+  </wsdl:message>
+  <wsdl:message name="bekciSoapIn">
+    <wsdl:part name="parameters" element="tns:bekci" />
+  </wsdl:message>
+  <wsdl:message name="bekciSoapOut">
+    <wsdl:part name="parameters" element="tns:bekciResponse" />
+  </wsdl:message>
+  <wsdl:message name="userinfoSoapIn">
+    <wsdl:part name="parameters" element="tns:userinfo" />
+  </wsdl:message>
+  <wsdl:message name="userinfoSoapOut">
+    <wsdl:part name="parameters" element="tns:userinfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="goruntuSoapIn">
+    <wsdl:part name="parameters" element="tns:goruntu" />
+  </wsdl:message>
+  <wsdl:message name="goruntuSoapOut">
+    <wsdl:part name="parameters" element="tns:goruntuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ucpartiSoapIn">
+    <wsdl:part name="parameters" element="tns:ucparti" />
+  </wsdl:message>
+  <wsdl:message name="ucpartiSoapOut">
+    <wsdl:part name="parameters" element="tns:ucpartiResponse" />
+  </wsdl:message>
+  <wsdl:message name="robotdataSoapIn">
+    <wsdl:part name="parameters" element="tns:robotdata" />
+  </wsdl:message>
+  <wsdl:message name="robotdataSoapOut">
+    <wsdl:part name="parameters" element="tns:robotdataResponse" />
+  </wsdl:message>
+  <wsdl:message name="classctrlSoapIn">
+    <wsdl:part name="parameters" element="tns:classctrl" />
+  </wsdl:message>
+  <wsdl:message name="classctrlSoapOut">
+    <wsdl:part name="parameters" element="tns:classctrlResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EVAglobalSoap">
+    <wsdl:operation name="servistest">
+      <wsdl:input message="tns:servistestSoapIn" />
+      <wsdl:output message="tns:servistestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginSoapIn" />
+      <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="konus">
+      <wsdl:input message="tns:konusSoapIn" />
+      <wsdl:output message="tns:konusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ai">
+      <wsdl:input message="tns:aiSoapIn" />
+      <wsdl:output message="tns:aiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bekci">
+      <wsdl:input message="tns:bekciSoapIn" />
+      <wsdl:output message="tns:bekciSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="userinfo">
+      <wsdl:input message="tns:userinfoSoapIn" />
+      <wsdl:output message="tns:userinfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="goruntu">
+      <wsdl:input message="tns:goruntuSoapIn" />
+      <wsdl:output message="tns:goruntuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ucparti">
+      <wsdl:input message="tns:ucpartiSoapIn" />
+      <wsdl:output message="tns:ucpartiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="robotdata">
+      <wsdl:input message="tns:robotdataSoapIn" />
+      <wsdl:output message="tns:robotdataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="classctrl">
+      <wsdl:input message="tns:classctrlSoapIn" />
+      <wsdl:output message="tns:classctrlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EVAglobalSoap" type="tns:EVAglobalSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="servistest">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/servistest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="konus">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/konus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ai">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/ai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bekci">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/bekci" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userinfo">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/userinfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goruntu">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/goruntu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ucparti">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/ucparti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="robotdata">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/robotdata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="classctrl">
+      <soap:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/classctrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EVAglobalSoap12" type="tns:EVAglobalSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="servistest">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/servistest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="konus">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/konus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ai">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/ai" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bekci">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/bekci" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userinfo">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/userinfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goruntu">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/goruntu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ucparti">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/ucparti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="robotdata">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/robotdata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="classctrl">
+      <soap12:operation soapAction="http://servis.cyanlog.com/EVAglobal6.asmx/classctrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EVAglobal">
+    <wsdl:port name="EVAglobalSoap" binding="tns:EVAglobalSoap">
+      <soap:address location="http://servis.cyanlog.com/evaglobal6.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EVAglobalSoap12" binding="tns:EVAglobalSoap12">
+      <soap12:address location="http://servis.cyanlog.com/evaglobal6.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
